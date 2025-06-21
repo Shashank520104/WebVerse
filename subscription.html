@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WebVerse Subscription</title>
+  <link rel="stylesheet" href="subscription.css">
+</head>
+<body>
+
+  <header>Unlock Premium Content</header>
+  
+  <main>
+    <div class="header">
+      <p>Choose your plan and enjoy unlimited streaming</p>
+      <hr>
+    </div>
+
+    <div class="plan">
+      <div class="card" onclick="selectplan('Basic')">
+        <h2>Basic</h2>
+        <p>₹99/month</p>
+        <ul>
+          <li>720p Streaming</li>
+          <li>1 Device</li>
+          <li>Limited Access</li>
+        </ul>
+        <button>Subscribe</button>
+      </div>
+
+      <div class="card" onclick="selectplan('standard')">
+        <h2>Standard</h2>
+        <p>₹199/month</p>
+        <ul>
+          <li>1080p Streaming</li>
+          <li>2 Devices</li>
+          <li>Full Access</li>
+        </ul>
+        <button>Subscribe</button>
+      </div>
+
+      <div class="card" onclick="selectplan('Premium')">
+        <h2>Premium</h2>
+        <p>₹299/month</p>
+        <ul>
+          <li>4K + HDR</li>
+          <li>4 Devices</li>
+          <li>All Features</li>
+        </ul>
+        <button>Subscribe</button>
+      </div>
+    </div>
+
+    <hr>
+  </main>
+
+  <script>
+    function selectplan(plan) {
+      const cards = document.querySelectorAll('.card');
+
+ 
+      cards.forEach(card => card.classList.remove('active'));
+
+
+      if (plan === 'Basic') {
+        cards[0].classList.add('active');
+      } else if (plan === 'standard') {
+        cards[1].classList.add('active');
+      } else if (plan === 'Premium') {
+        cards[2].classList.add('active');
+      }
+
+      alert(`🎉 You have selected the ${plan} plan!`);
+    }
+  </script>
+
+  <footer></footer>
+
+</body>
+</html>

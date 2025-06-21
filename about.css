@@ -1,0 +1,111 @@
+/* Reset and Fonts */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at top, #0d0d0d, #000000);
+  color: #ffffff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Glass Effect Card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 50px;
+  box-shadow: 0 0 30px rgba(203, 153, 61, 0.25), 0 0 60px rgba(255, 255, 255, 0.1);
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Typography */
+.title {
+  font-size: 3em;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 0 10px #cb993d;
+}
+.title span {
+  background: linear-gradient(45deg, #cb993d, #fff435, #f0b400);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.description {
+  font-size: 1.2em;
+  color: #ddd;
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Features */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.feature {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 12px 20px;
+  border-radius: 50px;
+  font-size: 1em;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 10px #cb993d33;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.feature:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #cb993d88;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .glass-card {
+    padding: 30px;
+  }
+
+  .title {
+    font-size: 2em;
+  }
+
+  .description {
+    font-size: 1em;
+  }
+}
